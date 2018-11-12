@@ -28,9 +28,10 @@ app.use(function (req, res, next) {
 });
 
 // API
-app.use('/api/users', require('./api/users')); //2
+app.use('/api/users', require('./api/users'));
+app.use('/api/stores', require('./api/stores'));
 app.use('/api/menus', require('./api/menus'));
-app.use('/api/auth', require('./api/auth'));   //2
+app.use('/api/auth', require('./api/auth'));
 
 app.get("/", function(req, res) {
   res.send("SiJiOrder - 새로운 시작.");
